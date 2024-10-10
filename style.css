@@ -1,0 +1,92 @@
+/* General Styling */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px #555;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    border: 4px solid transparent;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    color: #000; /* Default color for accessibility */
+}
+
+.cell:hover {
+    background-color: #ffd700;
+}
+
+.cell.X {
+    color: #ff6347;
+    border-color: #ff6347;
+}
+
+.cell.O {
+    color: #1e90ff;
+    border-color: #1e90ff;
+}
+
+/* Add emoji indicators for better accessibility */
+.cell.X::before {
+    content: "❌";
+}
+
+.cell.O::before {
+    content: "⭕";
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 15px 0;
+    text-shadow: 1px 1px 3px #333;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-shadow: 1px 1px 2px #000;
+}
+
+button:hover {
+    background-color: #555;
+}
